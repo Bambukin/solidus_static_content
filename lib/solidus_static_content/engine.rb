@@ -7,7 +7,7 @@ module SolidusStaticContent
   class Engine < Rails::Engine
     include SolidusSupport::EngineExtensions
 
-    isolate_namespace ::Spree
+    isolate_namespace SolidusStaticContent
 
     engine_name 'solidus_static_content'
 

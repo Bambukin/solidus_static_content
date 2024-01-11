@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 RSpec.describe Spree::Admin::PagesController do
+  render_views
+
   describe '.build_resource' do
     it 'pre-assigns the default store' do
       default_store = create(:store, default: true)

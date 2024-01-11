@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Spree::StaticContentController, type: :controller do
+  render_views
+
   let!(:store) { create(:store, default: true) }
 
   context '#show' do
