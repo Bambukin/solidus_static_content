@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SolidusStaticContent::RouteMatcher
   EXCLUDED_PATHS = /^\/+(admin|account|cart|checkout|content|login|pg\/|orders|products|s\/|session|signup|shipments|states|t\/|tax_categories|user)+/
 

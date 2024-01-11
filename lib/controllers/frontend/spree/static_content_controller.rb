@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Spree::StaticContentController < Spree::StoreController
   helper 'spree/products'
   layout :determine_layout

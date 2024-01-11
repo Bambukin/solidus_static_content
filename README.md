@@ -1,6 +1,6 @@
 # Solidus Static Content
 
-[![CircleCI](https://circleci.com/gh/solidusio-contrib/solidus_static_content.svg?style=svg)](https://circleci.com/gh/solidusio-contrib/solidus_static_content)
+[![CircleCI](https://circleci.com/gh/jtapia/solidus_static_content.svg?style=svg)](https://circleci.com/gh/jtapia/solidus_static_content)
 
 A fork of the [Spree extension](https://github.com/spree-contrib/spree_static_content) for
 compatibility with [Solidus](https://solidus.io).
@@ -16,7 +16,7 @@ Good, clean content management of pages for Solidus. You can use it to:
 Add solidus_static_content to your Gemfile:
 
 ```ruby
-gem 'solidus_static_content'
+gem 'solidus_static_content', github: 'jtapia/solidus_static_content'
 ```
 
 Bundle your dependencies and run the installation generator:
@@ -114,5 +114,5 @@ bundle exec gem bump -v VERSION --tag --push --remote upstream && gem release
 ## License
 
 Copyright (c) 2014 [Peter Berkenbosch](https://github.com/peterberkenbosch) and
-[contributors](https://github.com/solidusio-contrib/solidus_static_content/graphs/contributors),
+[contributors](https://github.com/jtapia/solidus_static_content/graphs/contributors),
 released under the New BSD License.
