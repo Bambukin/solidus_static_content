@@ -16,20 +16,16 @@ module SolidusStaticContent
       g.test_framework :rspec
     end
 
-    def self.menu_item
-      @menu_item ||= Spree::Backend::Config.class::MenuItem.new(
-        [:pages],
-        'file-text',
-        condition: -> { can?(:admin, Spree::Page) },
-      )
+    initializer 'solidus_static_content.configure_backend' do
+      next unless ::Spree::Backend::Config.respond_to?(:menu_items)
+
+      Spree::Backend::Config.configure do |config|
+        config.menu_items << config.class::MenuItem.new(
+          label: :pages,
+          icon: 'file-text',
+          condition: -> { can?(:admin, Spree::Page) },
+        )
+      end
     end
-
-    def self.activate_menu_items
-      return if Spree::Backend::Config.menu_items.include?(menu_item)
-
-      Spree::Backend::Config.menu_items << menu_item
-    end
-
-    config.to_prepare(&method(:activate_menu_items))
   end
 end
